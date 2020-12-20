@@ -2,9 +2,9 @@ export const videos = [
     {
         id:324393,
         title: 'Video awesome',
-        descripition: 'This is something I love',
+        description: 'This is something I love',
         views:24,
-        videoFile:"https://archive.org/details/BigBuckBunny_124",
+        videoFile:"https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
         creator: {
             id: 121212,
             name:"Han Juryeon",
@@ -14,9 +14,9 @@ export const videos = [
     {
         id:111111,
         title: 'Video super',
-        descripition: 'This is something I love',
+        description: 'This is something I love',
         views:24,
-        videoFile:"https://archive.org/details/BigBuckBunny_124",
+        videoFile:"https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
         creator: {
             id: 121212,
             name:"Han Juryeon",
@@ -26,9 +26,9 @@ export const videos = [
     {
         id:12121,
         title: 'Video nice',
-        descripition: 'This is something I love',
+        description: 'This is something I love',
         views:24,
-        videoFile:"https://archive.org/details/BigBuckBunny_124",
+        videoFile:"https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
         creator: {
             id: 121212,
             name:"Han Juryeon",
@@ -38,9 +38,9 @@ export const videos = [
     {
         id:111393,
         title: 'Video pe',
-        descripition: 'This is something I love',
+        description: 'This is something I love',
         views:24,
-        videoFile:"https://archive.org/details/BigBuckBunny_124",
+        videoFile:"https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
         creator: {
             id: 121212,
             name:"Han Juryeon",
