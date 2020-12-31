@@ -1,0 +1,10 @@
+diff a/middlewares.js b/middlewares.js	(rejected hunks)
+@@ -2,5 +3,8 @@
++import multer from "multer";
+ import routes from "./routess";
+ 
++
++
+ export const localsMiddleware = (req, res, next) => {
+     res.locals.siteName = "WeTube";
+     res.locals.routes = routes;
