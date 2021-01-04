@@ -4,7 +4,7 @@ import Video from "../models/Video";
 
 export const home = async(req, res) => {
     try{
-    const videos = await Video.find({}); 
+    const videos = await Video.find({}).sort({ _id: -1 }); // -1은 위아래 순서를 바꿔줌 여기서는 비디오 아이디로 정렬시킴 
     res.render("home", {pageTitle: "HOME", videos});
     } catch(error) {
         console.log(error);
@@ -16,7 +16,7 @@ export const search = (req, res) => {
     const {
         query: { term: searchingBy }
     } = req;
-    res.render("search", {pageTitle: "Search", searchingBy, videos });
+    res.render("search", {pageTitle: "Search", searchingBy });
 }
 
 export const getUpload = (req, res) => 
@@ -82,7 +82,9 @@ export const deleteVideo = async (req, res) => {
     } = req;
     try{
         await Video.findOneAndRemove({ _id: id });
-    } catch (error) {}
+    } catch (error) {
+        console.log(error);
+    }
     res.redirect(routes.home);
 };
     
