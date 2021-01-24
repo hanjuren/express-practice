@@ -4,7 +4,7 @@ export const videos = [
         title: 'Video awesome',
         description: 'I Love You',
         views: 24,
-        videoFile: 'https://archive.org/details/BigBuckBunny_124',
+        videoFile: 'https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4',
         creator: {
             id: 212121,
             name: 'hanjuren',
@@ -16,7 +16,7 @@ export const videos = [
         title: 'Video Love',
         description: 'I Hate You',
         views: 74,
-        videoFile: 'https://archive.org/details/BigBuckBunny_124',
+        videoFile: 'https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4',
         creator: {
             id: 212121,
             name: 'hanjuren',
@@ -28,7 +28,7 @@ export const videos = [
         title: 'Video Super',
         description: 'I Love Me',
         views: 22,
-        videoFile: 'https://archive.org/details/BigBuckBunny_124',
+        videoFile: 'https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4',
         creator: {
             id: 212121,
             name: 'hanjuren',

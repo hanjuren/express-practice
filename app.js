@@ -11,7 +11,7 @@ import routes from "./routess";
 
 const app = express();
 
-app.use(helmet());
+app.use(helmet({ contentSecurityPolicy: false }));
 app.use(morgan('dev'));
 app.set('view engine', 'pug');
 app.use(cookieParser());
