@@ -1,5 +1,4 @@
 import express from "express";
-import { editProfile } from "../controller/userControllers";
 import { 
     editVideo, 
     upload, 

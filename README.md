@@ -14,3 +14,15 @@ M Model : data 데이터
 V View : how does data look 데이터를 어떻게 생겼는지  
 C Control : function that look for the data 데이터를 찾는 함수
 
+## pages:
+
+- [ ] Home
+- [x] Join
+- [x] Login
+- [x] Search
+- [ ] UserDetail
+- [ ] EditProfile
+- [x] ChangePassword
+- [x] UploadVideo
+- [ ] VideoDetail
+- [ ] EditVideo
