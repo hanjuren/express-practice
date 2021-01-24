@@ -15,6 +15,8 @@ app.use(helmet({ contentSecurityPolicy: false }));
 app.use(morgan('dev'));
 app.set('view engine', 'pug');
 app.use(cookieParser());
+//app.use(express.json());
+//app.use(express.urlencoded( {extended: false } ));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); // 중첩된 객체 표현을 할지 말지 정하는것 true는 qs모듈사용 false는 query-string모듈 사용
 app.use(localMiddleware);
