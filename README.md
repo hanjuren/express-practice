@@ -19,7 +19,7 @@ C Control : function that look for the data 데이터를 찾는 함수
 - [ ] Home
 - [x] Join
 - [x] Login
-- [x] Search
+- [x] Search 
 - [ ] UserDetail
 - [ ] EditProfile
 - [x] ChangePassword
