@@ -1,6 +1,6 @@
 import routes from "../routess";
 import Video from "../models/Video";
-
+import fs from "fs";
 
 export const home = async (req, res) => {
     try {
@@ -48,7 +48,7 @@ export const videoDetail = async (req, res) => {
     try {
         const video = await Video.findById(id);
         console.log(video);
-        res.render("videoDetail", { pageTitle: 'Video Detail', video });
+        res.render("videoDetail", { pageTitle: video.title, video });
     } catch (error) {
         console.error(error);
         res.redirect(routes.home);
@@ -81,5 +81,16 @@ export const postEditVideo =  async (req, res) => {
 };
 
 
-export const deleteVideo = (req, res) => 
-    res.render("deleteVideo", { pageTitle: 'Delete Video' });
+export const deleteVideo =  async (req, res) => {
+    const {
+        params : {id}
+    } = req;
+    try {
+        const video = await Video.findOneAndRemove({_id: id});
+        console.log(video);
+        fs.unlinkSync(video.fileUrl); // 폴더에 비디오 삭제하기 귀찮으니까...
+    } catch (error) {
+        console.error(error);
+    }
+    res.redirect(routes.home);
+};
