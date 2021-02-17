@@ -1,4 +1,3 @@
-import { videos } from "../db";
 import routes from "../routess";
 
 export const home = (req, res) => {
