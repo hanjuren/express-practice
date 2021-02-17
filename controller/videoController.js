@@ -1,11 +1,11 @@
+import fs from "fs";
 import routes from "../routess";
 import Video from "../models/Video";
-import fs from "fs";
 
 export const home = async (req, res) => {
     try {
         const videos = await Video.find({});
-        //console.log(videos);  
+        console.log(videos);  
         res.render('home', { pageTitle: 'Home', videos });
     } catch(error) {
         console.error(error);
@@ -13,10 +13,16 @@ export const home = async (req, res) => {
     }
 };
 
-export const search = (req, res) => {
+export const search = async (req, res) => {
     const {
         query: { term: searchingBy }
     } = req;
+    let videos = [];
+    try {
+        videos = await Video.find({title: { $regex: searchingBy, $options: "i" } });
+    } catch (error) {
+       console.error(error); 
+    }
     res.render("search", { pageTitle: 'Search', searchingBy, videos });
 };
 
