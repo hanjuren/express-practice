@@ -8,9 +8,11 @@
     "-": "0.0.1",
     "@babel/core": "^7.12.10",
     "@babel/node": "^7.12.10",
+    "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.12.11",
     "D": "^1.0.0",
     "autoprefixer": "^10.2.4",
+    "babel-loader": "^8.2.2",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
     "css-loader": "^5.0.2",
@@ -29,8 +31,8 @@
     "webpack-cli": "^4.5.0"
   },
   "scripts": {
-    "div:server": "nodemon --exec babel-node init.js --delay 2",
-    "dev:assets": "cross-env WEBPACK_ENV=development webpack",
+    "dev:server": "nodemon --exec babel-node init.js --delay 2",
+    "dev:assets": "cross-env WEBPACK_ENV=development webpack -w",
     "build:assets": "cross-env WEBPACK_ENV=production webpack"
   },
   "devDependencies": {
@@ -44,5 +46,6 @@
     "nodemon": "^2.0.7",
     "postcss": "^8.2.6",
     "prettier": "^2.2.1"
-  }
+  },
+  "browserslist": [ "cover 99.5%" ]
 }
