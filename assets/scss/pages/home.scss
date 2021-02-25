@@ -1,0 +1,35 @@
+.home-videos {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(150px, 1fr));       
+    grid-gap: 15px;
+    h4,
+    h6 {
+        color: $black;
+    }
+    .videoBlock video {
+        background-color: black;
+    }
+    .videoBlock:first-child,
+    .videoBlock:nth-child(2) {
+        grid-column: span 3;
+        height: 400px;
+        video{
+            height: 80%;
+        }
+    }
+    .videoBlock:nth-child(3),
+    .videoBlock:nth-child(4),
+    .videoBlock:nth-child(5) {
+        grid-column: span 2;
+        height: 400px;
+        video{
+            height: 80%;
+        }
+    }
+    .videoBlock:nth-child(n+6){
+        video{
+            height: 220px;
+        }
+    }
+    
+}
