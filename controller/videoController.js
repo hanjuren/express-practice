@@ -5,7 +5,7 @@ import Video from "../models/Video";
 export const home = async (req, res) => {
     try {
         const videos = await Video.find({});
-        console.log(videos);  
+        //console.log(videos);  
         res.render('home', { pageTitle: 'Home', videos });
     } catch(error) {
         console.error(error);
@@ -53,7 +53,7 @@ export const videoDetail = async (req, res) => {
     } = req;
     try {
         const video = await Video.findById(id);
-        console.log(video);
+        //console.log(video);
         res.render("videoDetail", { pageTitle: video.title, video });
     } catch (error) {
         console.error(error);
@@ -93,7 +93,7 @@ export const deleteVideo =  async (req, res) => {
     } = req;
     try {
         const video = await Video.findOneAndRemove({_id: id});
-        console.log(video);
+        //console.log(video);
         fs.unlinkSync(video.fileUrl); // 폴더에 비디오 삭제하기 귀찮으니까...
     } catch (error) {
         console.error(error);
