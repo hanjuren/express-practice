@@ -18,7 +18,8 @@ export const postJoin = async(req, res, next) => {
         try{
             const user = await User({
                 name,
-                email
+                email,
+                avatarUrl: "uploads/avatars/ddb0a3ef5a3562d365d056663a2ddabb"
             });
             await User.register(user, password);
             next();
@@ -101,5 +102,25 @@ export const userDetail = async (req, res) => {
     }
 };
 
-export const editProfile = (req, res) => res.render("editProfile", { pageTitle: 'Edit Profile' });
+export const getEditProfile = (req, res) => 
+    res.render("editProfile", { pageTitle: 'Edit Profile' });
+
+export const postEditProfile = async (req, res) => {
+    const {
+        body: {name, email},
+        file
+    } = req;
+    try {
+        const user = await User.findByIdAndUpdate(req.user.id, {
+            name,
+            email,
+            avatarUrl: file ? file.path : req.user.avatarUrl
+        });
+        res.redirect(routes.me);
+        console.log(req.user.id);
+    } catch (error) {
+        res.render("editProfile", { pageTitle: "Edit Profile" });
+    }
+}
+
 export const changePassword = (req, res) => res.render("changePassword", { pageTitle: 'Change Password' });

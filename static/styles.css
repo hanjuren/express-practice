@@ -143,10 +143,13 @@ input {
 
 .u-avatar {
   height: 80px;
-  background-color: #ea232c;
+  width: 90px;
+  background-color: white;
   -webkit-border-radius: 50%;
      -moz-border-radius: 50%;
           border-radius: 50%; }
+  .u-avatar h5 {
+    margin-top: 50%; }
 
 html,
 body {
