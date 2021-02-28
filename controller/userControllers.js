@@ -81,6 +81,7 @@ export const postGithubLogin = (req, res) => {
 export const logout = (req, res) => {
     // TO DO logout
     req.logout();
+    req.session.destroy();
     res.redirect(routes.home);
 };
     
@@ -93,7 +94,7 @@ export const getMe = (req, res) => {
 export const userDetail = async (req, res) => {
     const { params: {id} } = req;
     try {
-        const user = await User.findById({id});
+        const user = await User.findById({_id: id });
         res.render("userDetail", { pageTitle: 'User Detail', user });
     } catch(error) {
         res.redirect(routes.home);

@@ -27,7 +27,7 @@ globalRouter.post(routes.login, postLogin);
 
 globalRouter.get(routes.home, home);
 globalRouter.get(routes.search, search);
-globalRouter.get(routes.logout, onlyPrivate ,logout);
+globalRouter.get(routes.logout , logout);
 
 // 깃허브
 globalRouter.get(routes.gitHub, githubLogin);
