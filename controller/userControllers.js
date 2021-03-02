@@ -103,8 +103,10 @@ export const userDetail = async (req, res) => {
     }
 };
 
-export const getEditProfile = (req, res) => 
+export const getEditProfile = (req, res) => {
     res.render("editProfile", { pageTitle: 'Edit Profile' });
+    console.log(req.user);
+};
 
 export const postEditProfile = async (req, res) => {
     const {
