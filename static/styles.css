@@ -418,9 +418,8 @@ button.delete {
   .videoPlayer video {
     max-width: 100%;
     max-height: 100%;
-    height: 340px;
-    width: 700px;
-    background-color: black; }
+    height: 350px;
+    width: 700px; }
   .videoPlayer .videoPlayer__controls {
     opacity: 0;
     -webkit-transition: opacity 0.4s linear;
@@ -430,7 +429,7 @@ button.delete {
     position: absolute;
     z-index: 9;
     color: white;
-    bottom: 2px;
+    bottom: 1px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
@@ -448,8 +447,39 @@ button.delete {
          -moz-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
-      .videoPlayer .videoPlayer__controls .videoPlayer__column:first-child span:first-child {
+      .videoPlayer .videoPlayer__controls .videoPlayer__column:first-child #jsVolumeBtn {
         margin-right: 10px; }
+    .videoPlayer .videoPlayer__controls .videoPlayer__volume {
+      position: absolute;
+      padding: 1px;
+      opacity: 1;
+      top: -50px;
+      left: -25px;
+      -webkit-transform: rotate(-90deg);
+         -moz-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+           -o-transform: rotate(-90deg);
+              transform: rotate(-90deg);
+      z-index: 10;
+      width: 80px;
+      background-color: gray;
+      background: transparent;
+      -webkit-appearance: none; }
+      .videoPlayer .videoPlayer__controls .videoPlayer__volume::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: none;
+        height: 0.9em;
+        width: 0.9em;
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+        background: #ec3a3a;
+        margin-top: -4.2px; }
+      .videoPlayer .videoPlayer__controls .videoPlayer__volume::-webkit-slider-runnable-track {
+        height: .35em;
+        background: white;
+        border: none;
+        -webkit-border-radius: 3px;
+                border-radius: 3px; }
     .videoPlayer .videoPlayer__controls .videoPlayer__column:last-child {
       justify-self: end; }
     .videoPlayer .videoPlayer__controls .videoPlayer__column:nth-child(2) {
@@ -457,6 +487,15 @@ button.delete {
     .videoPlayer .videoPlayer__controls i {
       font-size: 20px;
       cursor: pointer; }
+
+.record-container {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 50px; }
+  .record-container video {
+    background-color: #444444;
+    width: 100%;
+    margin-bottom: 20px; }
 
 .video-detail__container {
   display: -webkit-box;
@@ -476,6 +515,9 @@ button.delete {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  .video-detail__container .video__play {
+    height: 355px;
+    background-color: black; }
   .video-detail__container .video__info {
     width: 100%;
     max-width: 850px;

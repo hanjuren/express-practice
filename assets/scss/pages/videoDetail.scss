@@ -2,6 +2,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    .video__play{
+        height: 355px;
+        background-color: black;
+    }
     .video__info {
         width: 100%;
         max-width: 850px;
